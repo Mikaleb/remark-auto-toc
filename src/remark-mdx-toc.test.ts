@@ -1,6 +1,3 @@
-// import assert from 'node:assert/strict'
-// import { test } from 'node:test'
-
 import { compile } from '@mdx-js/mdx'
 import remarkMdxToc from 'remark-mdx-toc'
 import { testFixturesDirectory } from 'snapshot-fixtures'
