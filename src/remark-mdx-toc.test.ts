@@ -1,5 +1,6 @@
 import { compile } from '@mdx-js/mdx'
-import remarkMdxToc from 'remark-auto-toc'
+//@ts-ignore
+import remarkAutoToc from 'remark-auto-toc'
 import { testFixturesDirectory } from 'snapshot-fixtures'
 
 testFixturesDirectory({
@@ -9,7 +10,7 @@ testFixturesDirectory({
   tests: {
     'expected.jsx'(file, options) {
       return compile(file, {
-        remarkPlugins: [[remarkMdxToc, { name: 'toc', options }]],
+        remarkPlugins: [[remarkAutoToc, { name: 'toc', options }]],
         jsx: true
       })
     }
