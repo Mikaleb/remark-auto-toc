@@ -1,6 +1,6 @@
 {
   "name": "remark-auto-toc",
-  "version": "6.0.6",
+  "version": "6.0.7",
   "description": "A remark plugin for converting toc metadata into MDX exports",
   "author": "Mikaleb",
   "license": "MIT",
