@@ -1,11 +1,11 @@
-# remark-mdx-frontmatter
+# remark-mdx-toc
 
-[![github actions](https://github.com/remcohaszing/remark-mdx-frontmatter/actions/workflows/ci.yaml/badge.svg)](https://github.com/remcohaszing/remark-mdx-frontmatter/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/remcohaszing/remark-mdx-frontmatter/branch/main/graph/badge.svg)](https://codecov.io/gh/remcohaszing/remark-mdx-frontmatter)
-[![npm version](https://img.shields.io/npm/v/remark-mdx-frontmatter)](https://www.npmjs.com/package/remark-mdx-frontmatter)
-[![npm downloads](https://img.shields.io/npm/dm/remark-mdx-frontmatter)](https://www.npmjs.com/package/remark-mdx-frontmatter)
+[![github actions](https://github.com/remcohaszing/remark-mdx-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/remcohaszing/remark-mdx-toc/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/remcohaszing/remark-mdx-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/remcohaszing/remark-mdx-toc)
+[![npm version](https://img.shields.io/npm/v/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
+[![npm downloads](https://img.shields.io/npm/dm/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
 
-A [remark](https://remark.js.org) plugin for converting frontmatter metadata into MDX exports
+A [remark](https://remark.js.org) plugin for converting toc metadata into MDX exports
 
 ## Table of Contents
 
@@ -18,23 +18,22 @@ A [remark](https://remark.js.org) plugin for converting frontmatter metadata int
 
 ## Installation
 
-This package depends on the AST output by
-[remark-frontmatter](https://github.com/remarkjs/remark-frontmatter)
+This package depends on the AST output by [remark-toc](https://github.com/remarkjs/remark-toc)
 
 ```sh
-npm install remark-frontmatter remark-mdx-frontmatter
+npm install remark-toc remark-mdx-toc
 ```
 
 ## Usage
 
-This remark plugin takes frontmatter content, and outputs it as JavaScript exports. Both YAML and
-TOML frontmatter data are supported.
+This remark plugin takes toc content, and outputs it as JavaScript exports. Both YAML and TOML toc
+data are supported.
 
 For example, given a file named `example.mdx` with the following contents:
 
 ```mdx
 ---
-hello: frontmatter
+hello: toc
 ---
 
 Rest of document
@@ -46,8 +45,8 @@ The following script:
 import { readFile } from 'node:fs/promises'
 
 import { compile } from '@mdx-js/mdx'
-import remarkFrontmatter from 'remark-frontmatter'
-import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+import remarkFrontmatter from 'remark-toc'
+import remarkMdxFrontmatter from 'remark-mdx-toc'
 
 const { value } = await compile(await readFile('example.mdx'), {
   jsx: true,
@@ -59,8 +58,8 @@ console.log(value)
 Roughly yields:
 
 ```jsx
-export const frontmatter = {
-  hello: 'frontmatter'
+export const toc = {
+  hello: 'toc'
 }
 
 export default function MDXContent() {
@@ -74,12 +73,11 @@ The default export is a [remark](https://remark.js.org) plugin.
 
 ### Options
 
-- `name`: The identifier name of the variable the frontmatter data is assigned to. (Default:
-  `frontmatter`).
-- `parsers`: A mapping A mapping of node types to parsers. Each key represents a frontmatter node
-  type. The value is a function that accepts the frontmatter data as a string, and returns the
-  parsed data. By default `yaml` nodes will be parsed using [`yaml`](https://github.com/eemeli/yaml)
-  and `toml` nodes using [`toml`](https://github.com/BinaryMuse/toml-node).
+- `name`: The identifier name of the variable the toc data is assigned to. (Default: `toc`).
+- `parsers`: A mapping A mapping of node types to parsers. Each key represents a toc node type. The
+  value is a function that accepts the toc data as a string, and returns the parsed data. By default
+  `yaml` nodes will be parsed using [`yaml`](https://github.com/eemeli/yaml) and `toml` nodes using
+  [`toml`](https://github.com/BinaryMuse/toml-node).
 
 ## Compatibility
 
