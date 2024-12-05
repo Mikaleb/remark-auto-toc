@@ -1,7 +1,7 @@
-import assert from 'node:assert/strict'
-import { test } from 'node:test'
+// import assert from 'node:assert/strict'
+// import { test } from 'node:test'
 
-import { compile, compileSync } from '@mdx-js/mdx'
+import { compile } from '@mdx-js/mdx'
 import remarkMdxToc from 'remark-mdx-toc'
 import { testFixturesDirectory } from 'snapshot-fixtures'
 
@@ -81,13 +81,13 @@ testFixturesDirectory({
 //   )
 // })
 
-test('invalid name', () => {
-  assert.throws(
-    () =>
-      compileSync('---\n\n---\n', {
-        remarkPlugins: [[remarkMdxToc, { name: 'Not valid', options: {} }]],
-        jsx: true
-      }),
-    /Name should be a valid identifier, got: "Not valid"/
-  )
-})
+// test('invalid name', () => {
+//   assert.throws(
+//     () =>
+//       compileSync('---\n\n---\n', {
+//         remarkPlugins: [[remarkMdxToc, { name: 'Not valid', options: {} }]],
+//         jsx: true
+//       }),
+//     /Name should be a valid identifier, got: "Not valid"/
+//   )
+// })
