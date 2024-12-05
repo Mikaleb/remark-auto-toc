@@ -1,5 +1,5 @@
 import { compile } from '@mdx-js/mdx'
-import remarkMdxToc from 'remark-mdx-toc'
+import remarkMdxToc from 'remark-auto-toc'
 import { testFixturesDirectory } from 'snapshot-fixtures'
 
 testFixturesDirectory({
