@@ -47,12 +47,11 @@ The following script:
 import { readFile } from 'node:fs/promises'
 
 import { compile } from '@mdx-js/mdx'
-import remarkFrontmatter from 'remark-toc'
-import remarkMdxFrontmatter from 'remark-mdx-toc'
+import remarkMdxToc from 'remark-mdx-toc'
 
 const { value } = await compile(await readFile('example.mdx'), {
   jsx: true,
-  remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter]
+  remarkPlugins: [remarkMdxToc]
 })
 console.log(value)
 ```

@@ -12,14 +12,14 @@ testFixturesDirectory({
   tests: {
     'expected.jsx'(file, options) {
       return compile(file, {
-        remarkPlugins: [remarkMdxToc],
+        remarkPlugins: [[remarkMdxToc, { name: 'okay', options }]],
         jsx: true
       })
     }
   }
 })
 
-// test('toc generator', async () => {
+// Test('toc generator', async () => {
 //   const { value } = await compile('---\nfoo: bar\n---\n', {
 //     remarkPlugins: [],
 //     jsx: true
@@ -85,7 +85,7 @@ test('invalid name', () => {
   assert.throws(
     () =>
       compileSync('---\n\n---\n', {
-        remarkPlugins: [[remarkMdxToc, { name: 'Not valid' }]],
+        remarkPlugins: [[remarkMdxToc, { name: 'Not valid', options: {} }]],
         jsx: true
       }),
     /Name should be a valid identifier, got: "Not valid"/
