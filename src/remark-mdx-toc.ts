@@ -28,9 +28,6 @@ const remarkMdxToc: Plugin<[RemarkMdxTocOptions?], Root> =
   ({ name = 'toc', options } = {}) =>
   (ast: Root) => {
     const identifier = isIdentifierName(name) ? name : 'toc'
-    if (!isIdentifierName(identifier)) {
-      throw new Error(`Name should be a valid identifier, got: ${JSON.stringify(identifier)}`)
-    }
 
     const walkedToc = options ? toc(ast, options) : toc(ast)
     // Export in MDX
@@ -53,7 +50,7 @@ const remarkMdxToc: Plugin<[RemarkMdxTocOptions?], Root> =
                     type: 'VariableDeclarator',
                     id: {
                       type: 'Identifier',
-                      name
+                      name: identifier
                     },
                     init: valueToEstree(walkedToc, { preserveReferences: true })
                   }
