@@ -1,7 +1,9 @@
 # remark-mdx-toc
 
 [![ci](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/remcohaszing/remark-mdx-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/remcohaszing/remark-mdx-toc)
+
+<!-- [![codecov](https://codecov.io/gh/Mikaleb/remark-mdx-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/Mikaleb/remark-mdx-toc) -->
+
 [![npm version](https://img.shields.io/npm/v/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
 [![npm downloads](https://img.shields.io/npm/dm/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
 
