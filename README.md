@@ -1,6 +1,6 @@
 # remark-mdx-toc
 
-[![github actions](https://github.com/remcohaszing/remark-mdx-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/remcohaszing/remark-mdx-toc/actions/workflows/ci.yaml)
+[![ci](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/remcohaszing/remark-mdx-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/remcohaszing/remark-mdx-toc)
 [![npm version](https://img.shields.io/npm/v/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
 [![npm downloads](https://img.shields.io/npm/dm/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
@@ -9,12 +9,14 @@ A [remark](https://remark.js.org) plugin for converting toc metadata into MDX ex
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [API](#api)
-  - [Options](#options)
-- [Compatibility](#compatibility)
-- [License](#license)
+- [remark-mdx-toc](#remark-mdx-toc)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [API](#api)
+    - [Options](#options)
+  - [Compatibility](#compatibility)
+  - [License](#license)
 
 ## Installation
 
