@@ -12,7 +12,7 @@ testFixturesDirectory({
   tests: {
     'expected.jsx'(file, options) {
       return compile(file, {
-        remarkPlugins: [[remarkMdxToc, { name: 'okay', options }]],
+        remarkPlugins: [[remarkMdxToc, { name: 'toc', options }]],
         jsx: true
       })
     }
