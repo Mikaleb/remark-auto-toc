@@ -47,6 +47,7 @@
     "@mdx-js/mdx": "^3.0.0",
     "@types/node": "*",
     "c8": "^10.0.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.0",
     "eslint-config-remcohaszing": "^10.0.0",
     "eslint-plugin-jsx-a11y": "^6.0.0",
@@ -57,5 +58,10 @@
     "remark-preset-remcohaszing": "^3.0.0",
     "snapshot-fixtures": "^1.0.0",
     "typescript": "^5.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
