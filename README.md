@@ -88,4 +88,4 @@ This project is compatible with Node.js 18 or greater.
 
 ## License
 
-[MIT](LICENSE.md) © [Remco Haszing](https://github.com/remcohaszing)
+[MIT](LICENSE.md) © [Mikaleb](https://github.com/mikaleb)
