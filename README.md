@@ -1,17 +1,17 @@
-# remark-mdx-toc
+# remark-auto-toc
 
-[![ci](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mikaleb/remark-mdx-toc/actions/workflows/ci.yaml)
+[![ci](https://github.com/Mikaleb/remark-auto-toc/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mikaleb/remark-auto-toc/actions/workflows/ci.yaml)
 
-<!-- [![codecov](https://codecov.io/gh/Mikaleb/remark-mdx-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/Mikaleb/remark-mdx-toc) -->
+<!-- [![codecov](https://codecov.io/gh/Mikaleb/remark-auto-toc/branch/main/graph/badge.svg)](https://codecov.io/gh/Mikaleb/remark-auto-toc) -->
 
-[![npm version](https://img.shields.io/npm/v/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
-[![npm downloads](https://img.shields.io/npm/dm/remark-mdx-toc)](https://www.npmjs.com/package/remark-mdx-toc)
+[![npm version](https://img.shields.io/npm/v/remark-auto-toc)](https://www.npmjs.com/package/remark-auto-toc)
+[![npm downloads](https://img.shields.io/npm/dm/remark-auto-toc)](https://www.npmjs.com/package/remark-auto-toc)
 
 A [remark](https://remark.js.org) plugin for converting toc metadata into MDX exports
 
 ## Table of Contents
 
-- [remark-mdx-toc](#remark-mdx-toc)
+- [remark-auto-toc](#remark-auto-toc)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -25,7 +25,7 @@ A [remark](https://remark.js.org) plugin for converting toc metadata into MDX ex
 This package depends on the AST output by [remark-toc](https://github.com/remarkjs/remark-toc)
 
 ```sh
-npm install remark-toc remark-mdx-toc
+npm install remark-toc remark-auto-toc
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ The following script:
 import { readFile } from 'node:fs/promises'
 
 import { compile } from '@mdx-js/mdx'
-import remarkMdxToc from 'remark-mdx-toc'
+import remarkMdxToc from 'remark-auto-toc'
 
 const { value } = await compile(await readFile('example.mdx'), {
   jsx: true,
